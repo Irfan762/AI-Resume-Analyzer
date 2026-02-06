@@ -11,39 +11,6 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [dragging, setDragging] = useState(false);
 
-  // Test if the component renders
-  console.log('Home component is rendering...');
-
-  return (
-    <div className="min-h-screen bg-slate-50">
-      <div className="max-w-4xl mx-auto p-8">
-        <h1 className="text-4xl font-bold text-center text-slate-900 mb-8">
-          AI Resume Analyzer
-        </h1>
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <p className="text-lg text-slate-600 text-center">
-            Welcome to the AI Resume Analyzer! The application is working.
-          </p>
-          <div className="mt-8 text-center">
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-              Test Button
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Home;
-
-const Home = () => {
-  const navigate = useNavigate();
-  const [file, setFile] = useState(null);
-  const [jd, setJd] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [dragging, setDragging] = useState(false);
-
   // Handle File Drop
   const handleDrop = (e) => {
     e.preventDefault();
@@ -588,11 +555,14 @@ Master of Science in Computer Science | Stanford University | 2017
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-            <button className="btn-primary text-lg px-10 py-4">
+            <button 
+              onClick={() => document.getElementById('fileInput')?.click()}
+              className="btn-primary text-lg px-10 py-4"
+            >
               <Upload size={20} />
               Analyze Resume
             </button>
-            <Link to="/resume-builder" className="px-10 py-4 bg-white border-2 border-slate-200 text-slate-700 font-semibold rounded-xl hover:border-slate-300 hover:bg-slate-50 transition-all flex items-center gap-2">
+            <Link to="/resume-builder" className="px-10 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold rounded-xl transition-all shadow-lg flex items-center gap-2">
               <PenTool size={20} />
               Build Resume
             </Link>

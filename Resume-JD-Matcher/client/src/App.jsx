@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Results from './pages/Results';
 import Admin from './pages/Admin';
+import ResumeBuilder from './pages/ResumeBuilder';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/results" element={<Results />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/resume-builder" element={<ResumeBuilder />} />
       </Routes>
     </Router>
   );
