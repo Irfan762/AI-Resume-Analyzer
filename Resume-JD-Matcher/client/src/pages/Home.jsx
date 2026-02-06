@@ -427,30 +427,38 @@ Master of Science in Computer Science | Stanford University | 2017
   return (
     <div className="min-h-screen">
       
-      {/* Navbar */}
-      <nav className="border-b border-slate-200/60 bg-white/80 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="bg-gradient-to-br from-slate-900 to-blue-900 p-2 rounded-xl shadow-lg">
-              <Sparkles size={18} className="text-white" />
+      {/* Professional Navbar */}
+      <nav className="border-b border-slate-200/80 bg-white/95 backdrop-blur-2xl sticky top-0 z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl blur-lg opacity-30"></div>
+              <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 p-2.5 rounded-2xl shadow-xl">
+                <Sparkles size={20} className="text-white" />
+              </div>
             </div>
-            <span className="font-black text-xl tracking-tight text-gradient bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">ResumeAI</span>
-            <div className="px-2 py-1 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 text-xs font-bold rounded-full border border-blue-100 ml-2">
-              3.0
+            <div className="flex items-center gap-3">
+              <span className="font-black text-2xl tracking-tight text-gradient bg-gradient-to-r from-slate-900 via-blue-800 to-purple-900 bg-clip-text text-transparent">ResumeAI</span>
+              <div className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold rounded-full shadow-lg">
+                PRO
+              </div>
             </div>
           </div>
-          <div className="flex items-center gap-8 text-sm font-semibold text-slate-600">
-            <a href="#" className="hover:text-slate-900 transition-colors duration-200 relative group">
+          <div className="hidden md:flex items-center gap-10 text-sm font-semibold text-slate-700">
+            <a href="#features" className="hover:text-blue-600 transition-colors duration-200 relative group">
               Features
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#" className="hover:text-slate-900 transition-colors duration-200 relative group">
-              How it works
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+            <a href="#templates" className="hover:text-blue-600 transition-colors duration-200 relative group">
+              Templates
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="https://github.com/irfan/AI-Resume-Analyzer" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors duration-200 relative group">
+            <a href="#how-it-works" className="hover:text-blue-600 transition-colors duration-200 relative group">
+              How it Works
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a href="https://github.com/irfan/AI-Resume-Analyzer" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl transition-all shadow-lg font-bold">
               GitHub
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
             </a>
           </div>
         </div>
@@ -460,130 +468,140 @@ Master of Science in Computer Science | Stanford University | 2017
         
         {/* Hero Section */}
         <div className="relative overflow-hidden">
-          {/* Animated Background Elements */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-float"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-400/20 to-orange-400/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
-            
-            {/* Floating Particles */}
-            <div className="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60"></div>
-            <div className="absolute top-40 right-32 w-1 h-1 bg-purple-400 rounded-full animate-pulse opacity-40" style={{animationDelay: '1s'}}></div>
-            <div className="absolute bottom-32 left-40 w-1.5 h-1.5 bg-pink-400 rounded-full animate-pulse opacity-50" style={{animationDelay: '3s'}}></div>
-            <div className="absolute bottom-20 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-pulse opacity-60" style={{animationDelay: '2s'}}></div>
-          </div>
-
-          <div className="relative text-center space-y-8 pt-20 pb-16">
+          {/* Professional Hero Section */}
+          <div className="relative text-center space-y-8 pt-24 pb-20">
             {/* Premium Badge */}
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 border border-blue-100 rounded-full mb-8 backdrop-blur-sm shadow-lg">
+            <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 border-2 border-blue-100 rounded-full mb-8 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300">
               <div className="relative">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-gradient-to-r from-blue-500 to-purple-500"></span>
                 </span>
               </div>
-              <span className="text-sm font-bold text-gradient bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 bg-clip-text text-transparent tracking-wide uppercase">
-                ✨ AI-Powered Analysis 3.0 • Now with GPT Integration
+              <span className="text-sm font-black text-gradient bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 bg-clip-text text-transparent tracking-wide uppercase">
+                ✨ AI-Powered Resume Analysis • Trusted by 500K+ Professionals
               </span>
             </div>
             
-            {/* Main Heading with Stunning Typography */}
+            {/* Main Heading with Professional Typography */}
             <div className="space-y-6">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none">
-                <span className="block text-gradient bg-gradient-to-r from-slate-900 via-blue-800 to-purple-900 bg-clip-text text-transparent">
-                  Transform Your
+                <span className="block text-gradient bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 bg-clip-text text-transparent mb-2">
+                  Land Your Dream Job
                 </span>
-                <span className="block text-gradient bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent animate-pulse">
-                  Career Journey
+                <span className="block text-gradient bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  With AI Precision
                 </span>
               </h1>
               
               <div className="relative">
-                <p className="text-slate-600 text-xl md:text-2xl lg:text-3xl max-w-5xl mx-auto leading-relaxed font-light">
-                  Harness the power of <span className="font-semibold text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">advanced AI</span> to analyze, 
-                  optimize, and perfect your resume. Get instant insights, personalized recommendations, 
-                  and land your <span className="font-semibold text-gradient bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent">dream job</span>.
+                <p className="text-slate-600 text-xl md:text-2xl lg:text-3xl max-w-5xl mx-auto leading-relaxed font-medium">
+                  Advanced AI technology analyzes your resume against job descriptions, 
+                  providing <span className="font-bold text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">instant insights</span> and 
+                  <span className="font-bold text-gradient bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent"> actionable recommendations</span> to maximize your interview chances.
                 </p>
               </div>
             </div>
             
-            {/* Feature Highlights */}
-            <div className="flex items-center justify-center gap-12 pt-8">
-              <div className="flex flex-col items-center gap-3 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl shadow-xl flex items-center justify-center text-white group-hover:scale-110 transition-all duration-300">
-                  <BarChart3 size={32} />
+            {/* Professional Feature Highlights */}
+            <div className="flex items-center justify-center gap-12 pt-12">
+              <div className="flex flex-col items-center gap-4 group">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl shadow-2xl flex items-center justify-center text-white group-hover:scale-110 transition-all duration-300">
+                    <BarChart3 size={40} />
+                  </div>
                 </div>
-                <span className="text-sm font-bold text-slate-700">Deep Analytics</span>
-                <span className="text-xs text-slate-500">99.9% Accuracy</span>
+                <div className="text-center">
+                  <span className="block text-sm font-black text-slate-900">Deep Analytics</span>
+                  <span className="block text-xs text-slate-500 font-semibold">99.9% Accuracy</span>
+                </div>
               </div>
-              <div className="flex flex-col items-center gap-3 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl shadow-xl flex items-center justify-center text-white group-hover:scale-110 transition-all duration-300">
-                  <Shield size={32} />
+              <div className="flex flex-col items-center gap-4 group">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-3xl shadow-2xl flex items-center justify-center text-white group-hover:scale-110 transition-all duration-300">
+                    <Shield size={40} />
+                  </div>
                 </div>
-                <span className="text-sm font-bold text-slate-700">Enterprise Security</span>
-                <span className="text-xs text-slate-500">Bank-Grade</span>
+                <div className="text-center">
+                  <span className="block text-sm font-black text-slate-900">Enterprise Security</span>
+                  <span className="block text-xs text-slate-500 font-semibold">Bank-Grade</span>
+                </div>
               </div>
-              <div className="flex flex-col items-center gap-3 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl shadow-xl flex items-center justify-center text-white group-hover:scale-110 transition-all duration-300">
-                  <Sparkles size={32} />
+              <div className="flex flex-col items-center gap-4 group">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-violet-500 to-purple-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-3xl shadow-2xl flex items-center justify-center text-white group-hover:scale-110 transition-all duration-300">
+                    <Sparkles size={40} />
+                  </div>
                 </div>
-                <span className="text-sm font-bold text-slate-700">AI-Powered</span>
-                <span className="text-xs text-slate-500">GPT-4 Enhanced</span>
+                <div className="text-center">
+                  <span className="block text-sm font-black text-slate-900">AI-Powered</span>
+                  <span className="block text-xs text-slate-500 font-semibold">GPT-4 Enhanced</span>
+                </div>
               </div>
             </div>
 
-            {/* Success Stats */}
-            <div className="pt-12">
-              <div className="inline-flex items-center gap-8 bg-white/60 backdrop-blur-xl rounded-3xl p-8 border border-white/50 shadow-2xl">
+            {/* Professional Success Stats */}
+            <div className="pt-16">
+              <div className="inline-flex items-center gap-12 bg-white/80 backdrop-blur-2xl rounded-3xl p-10 border-2 border-slate-200/50 shadow-2xl">
                 <div className="text-center">
-                  <div className="text-4xl font-black text-gradient bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">500K+</div>
-                  <div className="text-sm font-semibold text-slate-600">Resumes Analyzed</div>
+                  <div className="text-5xl font-black text-gradient bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">500K+</div>
+                  <div className="text-sm font-bold text-slate-600">Resumes Analyzed</div>
                 </div>
-                <div className="w-px h-16 bg-gradient-to-b from-transparent via-slate-300 to-transparent"></div>
+                <div className="w-px h-20 bg-gradient-to-b from-transparent via-slate-300 to-transparent"></div>
                 <div className="text-center">
-                  <div className="text-4xl font-black text-gradient bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">94%</div>
-                  <div className="text-sm font-semibold text-slate-600">Success Rate</div>
+                  <div className="text-5xl font-black text-gradient bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">94%</div>
+                  <div className="text-sm font-bold text-slate-600">Success Rate</div>
                 </div>
-                <div className="w-px h-16 bg-gradient-to-b from-transparent via-slate-300 to-transparent"></div>
+                <div className="w-px h-20 bg-gradient-to-b from-transparent via-slate-300 to-transparent"></div>
                 <div className="text-center">
-                  <div className="text-4xl font-black text-gradient bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">4.9★</div>
-                  <div className="text-sm font-semibold text-slate-600">User Rating</div>
+                  <div className="text-5xl font-black text-gradient bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-2">4.9★</div>
+                  <div className="text-sm font-bold text-slate-600">User Rating</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+          {/* Professional CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
             <button 
               onClick={() => document.getElementById('fileInput')?.click()}
-              className="btn-primary text-lg px-10 py-4"
+              className="group relative px-12 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white font-black rounded-2xl shadow-2xl transition-all duration-300 text-lg overflow-hidden"
             >
-              <Upload size={20} />
-              Analyze Resume
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+              <div className="relative flex items-center gap-3">
+                <Upload size={24} />
+                <span>Analyze Resume Now</span>
+                <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+              </div>
             </button>
-            <Link to="/resume-builder" className="px-10 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold rounded-xl transition-all shadow-lg flex items-center gap-2">
-              <PenTool size={20} />
+            <Link to="/resume-builder" className="px-12 py-5 bg-white hover:bg-slate-50 text-slate-900 font-black rounded-2xl transition-all shadow-xl border-2 border-slate-200 hover:border-slate-300 text-lg flex items-center gap-3">
+              <PenTool size={24} />
               Build Resume
             </Link>
           </div>
         </div>
   
-        {/* Main Upload Section */}
-        <div className="relative">
+        {/* Professional Upload Section */}
+        <div className="relative" id="features">
           {/* Background Decoration */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 via-purple-50/30 to-pink-50/50 rounded-3xl blur-3xl"></div>
           
-          <div className="relative glass-card p-2">
-            <div className="bg-gradient-to-br from-white/90 to-white/70 rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-12 backdrop-blur-sm">
+          <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-2 shadow-2xl border-2 border-slate-200/50">
+            <div className="bg-gradient-to-br from-white to-slate-50/50 rounded-3xl p-10 md:p-14 grid md:grid-cols-2 gap-14">
               
               {/* Left: Resume Upload */}
-              <div className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white text-sm font-bold shadow-lg">1</div>
+              <div className="space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-lg opacity-30"></div>
+                    <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white text-lg font-black shadow-xl">1</div>
+                  </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 text-lg">Upload Resume</h3>
-                    <p className="text-slate-500 text-sm">PDF format, up to 16MB</p>
+                    <h3 className="font-black text-slate-900 text-xl">Upload Your Resume</h3>
+                    <p className="text-slate-600 text-sm font-semibold">PDF format • Maximum 16MB</p>
                   </div>
                 </div>
                 
@@ -647,12 +665,15 @@ Master of Science in Computer Science | Stanford University | 2017
               </div>
     
               {/* Right: JD Input */}
-              <div className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-sm font-bold shadow-lg">2</div>
+              <div className="space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-lg opacity-30"></div>
+                    <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-lg font-black shadow-xl">2</div>
+                  </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 text-lg">Job Description</h3>
-                    <p className="text-slate-500 text-sm">Paste the job requirements</p>
+                    <h3 className="font-black text-slate-900 text-xl">Job Description</h3>
+                    <p className="text-slate-600 text-sm font-semibold">Paste the complete job requirements</p>
                   </div>
                 </div>
                 
@@ -967,11 +988,68 @@ The more detailed the job description, the better our AI can analyze the match!"
           </div>
         </div>
         
-        {/* Footer */}
-        <div className="text-center pb-8 border-t border-slate-200 pt-12">
-          <p className="text-sm text-slate-400 font-medium">
-            AI Resume Analyzer © 2026 • Enterprise Edition
-          </p>
+        {/* Professional Footer */}
+        <div className="border-t-2 border-slate-200 pt-16 pb-12">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-2 rounded-xl shadow-lg">
+                  <Sparkles size={18} className="text-white" />
+                </div>
+                <span className="font-black text-xl text-slate-900">ResumeAI</span>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                AI-powered resume analysis platform trusted by professionals worldwide. Land your dream job with confidence.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="font-black text-slate-900 mb-4">Product</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="#features" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Features</a></li>
+                <li><a href="#templates" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Templates</a></li>
+                <li><a href="/resume-builder" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Resume Builder</a></li>
+                <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Pricing</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-black text-slate-900 mb-4">Company</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">About Us</a></li>
+                <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Blog</a></li>
+                <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Careers</a></li>
+                <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-black text-slate-900 mb-4">Legal</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Privacy Policy</a></li>
+                <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Terms of Service</a></li>
+                <li><a href="#" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">Cookie Policy</a></li>
+                <li><a href="https://github.com/irfan/AI-Resume-Analyzer" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-blue-600 transition-colors font-semibold">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-slate-500 font-semibold">
+              © 2026 ResumeAI. All rights reserved. Built with ❤️ for job seekers worldwide.
+            </p>
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+              </a>
+              <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://github.com/irfan/AI-Resume-Analyzer" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-600 transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
         </div>
   
       </div>
